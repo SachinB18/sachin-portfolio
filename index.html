@@ -1,92 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sachin | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sachin | Portfolio</title>
 
-    <!-- EmailJS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-        }
-
-        .container {
-            max-width: 420px;
-            margin: 80px auto;
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background: black;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background: #333;
-        }
-    </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div class="container">
+  <!-- NAVBAR -->
+  <header>
+    <h1>Sachin</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="section">
+    <h2>Hello, I'm Sachin 👋</h2>
+    <p>Computer Engineering Student | Java Developer</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I am a Computer Engineering student passionate about Java, backend
+      development, and problem-solving. I enjoy building real-world projects.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Java</li>
+      <li>Data Structures</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>MySQL</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <h3>Hospital Management System</h3>
+      <p>Java · Swing · JDBC · MySQL</p>
+      <p>
+        Desktop application to manage doctors, patients, and appointments with
+        database integration.
+      </p>
+      <a href="https://github.com/SachinB18" target="_blank">GitHub</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Automatic Timetable Generator</h3>
+      <p>Java · Data Structures</p>
+      <p>
+        Logic-based system to automatically generate academic timetables while
+        avoiding conflicts.
+      </p>
+      <a href="https://github.com/SachinB18" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
     <h2>Contact Me</h2>
 
-    <form id="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+    <!-- SIMPLE & RELIABLE CONTACT FORM -->
+    <form action="mailto:sachinhbabad8181@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
-</div>
+  </section>
 
-<script>
-    (function () {
-        emailjs.init("qrMTz1dNIxyYFVshx"); // PUBLIC KEY
-    })();
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Sachin Bhabad</p>
+  </footer>
 
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        emailjs.sendForm(
-            "service_nf4458o",      // SERVICE ID
-            "template_3nrqwe",      // TEMPLATE ID
-            this
-        ).then(
-            function () {
-                alert("Message sent successfully!");
-                document.getElementById("contact-form").reset();
-            },
-            function (error) {
-                alert("Failed to send message.");
-                console.error(error);
-            }
-        );
-    });
-</script>
-
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
