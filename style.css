@@ -6,11 +6,12 @@
 }
 
 body {
-  background-color: #f4f4f4;
-  color: #333;
+  background: #f5f5f5;
+  color: #222;
 }
 
-header {
+/* NAVBAR */
+.navbar {
   background: #000;
   color: #fff;
   padding: 15px 30px;
@@ -19,23 +20,62 @@ header {
   align-items: center;
 }
 
-header nav a {
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
   color: #fff;
-  margin-left: 15px;
   text-decoration: none;
 }
 
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* SECTIONS */
 .section {
-  padding: 40px 20px;
   max-width: 900px;
   margin: auto;
+  padding: 50px 20px;
 }
 
 .section h2 {
   margin-bottom: 20px;
-  color: #000;
 }
 
+/* SKILLS */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -47,23 +87,23 @@ header nav a {
   background: #000;
   color: #fff;
   padding: 8px 12px;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
+/* PROJECTS */
 .project-card {
   background: #fff;
   padding: 20px;
+  border-radius: 10px;
   margin-bottom: 20px;
-  border-radius: 8px;
 }
 
 .project-card a {
-  display: inline-block;
-  margin-top: 10px;
   color: #000;
   font-weight: bold;
 }
 
+/* CONTACT */
 form {
   display: flex;
   flex-direction: column;
@@ -82,11 +122,4 @@ form button {
   color: #fff;
   border: none;
   cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #000;
-  color: #fff;
 }
