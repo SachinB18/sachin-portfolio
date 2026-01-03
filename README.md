@@ -4,7 +4,7 @@ This repository contains my personal portfolio website built to showcase my
 projects, skills, and professional profile.
 
 ## 🌐 Live Website
-🔗 https://SachinB18.github.io/<repo-name>/
+🔗 [https://SachinB18.github.io/<repo-name>/](https://sachinb18.github.io/sachin-portfolio/)
 
 ## 👨‍💻 About Me
 I am a Computer Engineering student and Java & Backend Developer, open to freelance
