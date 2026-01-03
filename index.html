@@ -1,98 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sachin | Portfolio</title>
-
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Sachin Bhabad – Java & Backend Developer open to freelance work, internships, and project-based collaborations. Explore projects in Java, Python automation, machine learning, and web development.">
+    <meta name="keywords" content="Sachin Bhabad, Java Developer, Backend Developer, Freelance Developer, Python Automation, Machine Learning Projects, Student Portfolio">
+    <meta name="author" content="Sachin Bhabad">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Sachin Bhabad - Computer Engineering Student & Java Developer">
+    <meta property="og:description" content="Portfolio showcasing projects in Java, backend development, and software engineering.">
+    <meta property="og:type" content="website">
+    
+    <title>Sachin Bhabad - Computer Engineering Student | Java & Backend Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Sachin</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-brand">Sachin Bhabad</div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+                <span class="hamburger-line" aria-hidden="true"></span>
+                <span class="hamburger-line" aria-hidden="true"></span>
+                <span class="hamburger-line" aria-hidden="true"></span>
+            </button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+                    <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.66 4.34L14.24 5.76M5.76 14.24L4.34 15.66M15.66 15.66L14.24 14.24M5.76 5.76L4.34 4.34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M17 10.5C16.1 14.6 12.6 17.6 8.5 17.5C4.4 17.4 1 14 1 10C1 6.4 3.4 3.3 6.7 2.3C7.1 2.2 7.5 2.5 7.5 3C7.5 6.9 10.6 10 14.5 10C14.9 10 15.4 9.9 15.8 9.8C16.3 9.7 16.7 10.1 17 10.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="resume-dropdown">
+                    <button class="nav-resume-btn" id="resumeBtn">
+                        Resume
+                        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="resume-dropdown-menu" id="resumeDropdown">
+                        <a href="02-01-2026 SB_Reusme.pdf" class="dropdown-item" target="_blank">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 9V13C14 13.5304 13.7893 14.0391 13.4142 14.4142C13.0391 14.7893 12.5304 15 12 15H4C3.46957 15 2.96086 14.7893 2.58579 14.4142C2.21071 14.0391 2 13.5304 2 13V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11 5L8 2L5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            View Resume
+                        </a>
+                        <a href="02-01-2026 SB_Reusme.pdf" class="dropdown-item" download>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M14 10V13C14 13.5304 13.7893 14.0391 13.4142 14.4142C13.0391 14.7893 12.5304 15 12 15H4C3.46957 15 2.96086 14.7893 2.58579 14.4142C2.21071 14.0391 2 13.5304 2 13V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.66669 6.66667L8.00002 10L11.3334 6.66667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Download Resume
+                        </a>
+                    </div>
+                </li>
+            </ul>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <h1>Hi, I'm Sachin 👋</h1>
-    <p>Computer Engineering Student | Java Backend & DSA Learner</p>
-    <button>Download Resume</button>
-  </section>
+        </div>
+    </nav>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I am a Computer Engineering student passionate about backend development,
-      data structures, and building real-world applications. I enjoy solving
-      practical problems and learning new technologies.
-    </p>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-labelledby="hero-heading">
+        <div class="container">
+            <div class="hero-content">
+                <h1 id="hero-heading" class="hero-title">
+                    Hi, I'm <span class="highlight">Sachin Bhabad</span>
+                </h1>
+                <p class="hero-subtitle" role="doc-subtitle">
+                    Java & Backend Developer | Open for Freelance Work
+                </p>
+                <p class="hero-description">
+                    I build reliable backend systems, automation tools, and data-driven applications.
+                    I'm open to freelance projects, internships, and collaborations where I can help
+                    solve real-world problems using clean and efficient code.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary" aria-label="View my projects section">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary" aria-label="Go to contact section">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Java</li>
-      <li>Data Structures & Algorithms (Java)</li>
-      <li>OOPS</li>
-      <li>DBMS</li>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Git & GitHub</li>
-      <li>MySQL</li>
-    </ul>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about" aria-labelledby="about-heading">
+        <div class="container">
+            <h2 id="about-heading" class="section-title">About Me</h2>
+            <div class="about-content">
+                <article class="about-text">
+                    <p>
+                        I am currently pursuing a B.Tech in Computer Engineering and actively
+                        preparing for software engineering roles. My primary interests include
+                        backend development, data structures & algorithms, and database systems.
+                    </p>
+                    <p>
+                        I enjoy working on projects that solve practical problems and give me
+                        exposure to real-world development practices. I believe in consistency,
+                        continuous learning, and improving both technical and communication skills.
+                    </p>
+                    <p>
+                        Along with academics, I am focused on building strong fundamentals,
+                        maintaining a professional GitHub profile, and preparing for internships
+                        and placements.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
+    <!-- Skills Section -->
+    <section id="skills" class="skills" aria-labelledby="skills-heading">
+        <div class="container">
+            <h2 id="skills-heading" class="section-title">Skills & Technologies</h2>
 
-    <div class="project-card">
-      <h3>Hospital Management System</h3>
-      <p>Java · Swing · JDBC · MySQL</p>
-      <p>
-        Desktop application to manage doctors, patients, and appointments with
-        database integration.
-      </p>
-      <a href="https://github.com/SachinB18" target="_blank">GitHub</a>
-    </div>
+            <div class="skills-grid" role="list">
 
-    <div class="project-card">
-      <h3>Automatic Timetable Generator</h3>
-      <p>Java · Data Structures</p>
-      <p>
-        Logic-based system to automatically generate academic timetables while
-        avoiding conflicts.
-      </p>
-      <a href="https://github.com/SachinB18" target="_blank">GitHub</a>
-    </div>
-  </section>
+                <div class="skill-category" role="listitem">
+                    <h3>Programming</h3>
+                    <div class="skill-tags" role="list" aria-label="Programming languages">
+                        <span class="skill-tag" role="listitem">Java</span>
+                        <span class="skill-tag" role="listitem">C</span>
+                        <span class="skill-tag" role="listitem">Python (Basic)</span>
+                    </div>
+                </div>
 
-  <!-- CONTACT (ONLY LOGIC CHANGED) -->
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
+                <div class="skill-category" role="listitem">
+                    <h3>Core Concepts</h3>
+                    <div class="skill-tags" role="list" aria-label="Core computer science concepts">
+                        <span class="skill-tag" role="listitem">Data Structures & Algorithms</span>
+                        <span class="skill-tag" role="listitem">OOPS</span>
+                        <span class="skill-tag" role="listitem">DBMS</span>
+                        <span class="skill-tag" role="listitem">Computer Networks</span>
+                        <span class="skill-tag" role="listitem">Operating Systems</span>
+                    </div>
+                </div>
 
-    <form
-      action="mailto:sachinhbabad8181@gmail.com"
-      method="POST"
-      enctype="text/plain"
-    >
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+                <div class="skill-category" role="listitem">
+                    <h3>Web & Tools</h3>
+                    <div class="skill-tags" role="list" aria-label="Web technologies and development tools">
+                        <span class="skill-tag" role="listitem">HTML</span>
+                        <span class="skill-tag" role="listitem">CSS</span>
+                        <span class="skill-tag" role="listitem">JavaScript</span>
+                        <span class="skill-tag" role="listitem">MySQL</span>
+                        <span class="skill-tag" role="listitem">Git & GitHub</span>
+                        <span class="skill-tag" role="listitem">VS Code</span>
+                    </div>
+                </div>
 
-  <script src="script.js"></script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects" aria-labelledby="projects-heading">
+        <div class="container">
+            <h2 id="projects-heading" class="section-title">Projects</h2>
+
+            <div class="projects-grid" role="list">
+
+                <article class="project-card" role="listitem" tabindex="0">
+                    <header class="project-header">
+                        <h3>AQI Prediction System (ML + Flask)</h3>
+                    </header>
+                    <p class="project-description">
+                        Built a complete machine learning system to predict Air Quality Index (AQI)
+                        using pollutant concentration data. The project includes trained ML models
+                        and a Flask-based web interface, enabling users to input data and receive
+                        real-time AQI predictions.
+                    </p>
+                    <div class="project-tech" role="list" aria-label="Technologies used">
+                        <span role="listitem">Python</span>
+                        <span role="listitem">Machine Learning</span>
+                        <span role="listitem">Flask</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SachinB18/aqi-prediction" class="project-link" aria-label="View AQI Prediction System on GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card" role="listitem" tabindex="0">
+                    <header class="project-header">
+                        <h3>Hospital Management System</h3>
+                    </header>
+                    <p class="project-description">
+                        Developed a Java-based hospital management system to handle doctors,
+                        patients, appointments, and billing. Implemented secure database
+                        operations using JDBC and MySQL to ensure structured and reliable
+                        data management.
+                    </p>
+                    <div class="project-tech" role="list" aria-label="Technologies used">
+                        <span role="listitem">Java</span>
+                        <span role="listitem">Swing</span>
+                        <span role="listitem">JDBC</span>
+                        <span role="listitem">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" aria-label="View Hospital Management System on GitHub">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card" role="listitem" tabindex="0">
+                    <header class="project-header">
+                        <h3>CSV to Excel Automation Tool</h3>
+                    </header>
+                    <p class="project-description">
+                        Created a Python automation tool that cleans messy CSV sales data and
+                        generates structured Excel reports with summary metrics such as total
+                        and average sales, reducing manual reporting effort significantly.
+                    </p>
+                    <div class="project-tech" role="list" aria-label="Technologies used">
+                        <span role="listitem">Python</span>
+                        <span role="listitem">Pandas</span>
+                        <span role="listitem">Excel Automation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SachinB18/csv-to-excel-automation" class="project-link" aria-label="View CSV to Excel Automation Tool on GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card" role="listitem" tabindex="0">
+                    <header class="project-header">
+                        <h3>Automatic Timetable Generator</h3>
+                    </header>
+                    <p class="project-description">
+                        Designed a logic-based system to automatically generate academic
+                        timetables while avoiding faculty and classroom conflicts, focusing
+                        on applying data structures and constraint-based logic.
+                    </p>
+                    <div class="project-tech" role="list" aria-label="Technologies used">
+                        <span role="listitem">Java</span>
+                        <span role="listitem">Data Structures</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" aria-label="View Automatic Timetable Generator on GitHub">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card" role="listitem" tabindex="0">
+                    <header class="project-header">
+                        <h3>Personal Portfolio Website</h3>
+                    </header>
+                    <p class="project-description">
+                        Designed and developed a modern, responsive portfolio website to showcase
+                        projects and skills with smooth interactions, mobile responsiveness,
+                        and SEO-friendly structure.
+                    </p>
+                    <div class="project-tech" role="list" aria-label="Technologies used">
+                        <span role="listitem">HTML</span>
+                        <span role="listitem">CSS</span>
+                        <span role="listitem">JavaScript</span>
+                        <span role="listitem">GitHub Pages</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SachinB18" class="project-link" aria-label="View Personal Portfolio Website on GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+        <div class="container">
+            <h2 id="contact-heading" class="section-title">Contact</h2>
+
+            <div class="contact-content">
+                <p class="contact-text">
+                    I am open to freelance work, internships, and project-based collaborations.<br>
+                    If you’re looking for a dedicated developer to build, improve, or automate something, feel free to connect with me.
+
+                </p>
+
+                <div class="contact-info" role="list">
+
+                    <div class="contact-item" role="listitem">
+                        <h3>Email</h3>
+                        <p><a href="mailto:sachinbhabad8181@gmail.com" aria-label="Send email to Sachin Bhabad">sachinbhabad8181@gmail.com</a></p>
+                    </div>
+
+                    <div class="contact-item" role="listitem">
+                        <h3>Location</h3>
+                        <p>India</p>
+                    </div>
+
+                    <div class="contact-item" role="listitem">
+                        <h3>Profiles</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/SachinB18" class="social-link" aria-label="Visit Sachin Bhabad's GitHub profile" rel="noopener noreferrer" target="_blank">GitHub</a>
+                            <a href="https://www.linkedin.com/in/sachin-bhabad-19a00a333" class="social-link" aria-label="Visit Sachin Bhabad's LinkedIn profile" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2026 Sachin Bhabad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
