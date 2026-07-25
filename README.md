@@ -33,5 +33,3 @@ My resume is available directly on the website:
 - GitHub: https://github.com/SachinB18
 - LinkedIn: https://www.linkedin.com/in/sachin-bhabad-19a00a333
 
----
-⭐ Feel free to explore the projects and connect with me.
